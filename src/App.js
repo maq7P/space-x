@@ -75,9 +75,8 @@ class App extends React.Component {
           <Calendar/>
         </Route>
 
-        <Route path="/details">
-          <Main title={'Details'}/>
-          <Details/>
+        <Route path="/details/:id" component={Details}>
+          {/* <Details/> */}
         </Route>
 
         {this.state.company && <Footer {...this.state.company}/> }
